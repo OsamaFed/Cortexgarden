@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+:root {
+  --background: #F5FCF2;
+  --foreground: #1A2E15;
+  --muted-foreground: #5A7A52;
+  --card-bg: #FAFAF6;
+  --card-hover: #ECFAE5;
+  --primary: #4A9B5F;
+  --primary-hover: #3D8450;
+  --secondary: #6BB87E;
+  --success: #5CB371;
+  --error: #D85D5D;
+  --warning: #E8A94D;
+  --border: #D4EAC9;
+  --shadow: rgba(26, 46, 21, 0.08);
+  --shadow-md: rgba(26, 46, 21, 0.12);
+  --shadow-lg: rgba(26, 46, 21, 0.16);
+  --accent: #B0DB9C;
+  --accent-hover: #9FCD8A;
+  --link: #3D8450;
+  --link-hover: #2F6B3E;
+  --text-secondary: #4A6642;
+  --input-bg: #FBFEFB;
+  --input-border: #CAE8BD;
+  --input-focus: #4A9B5F;
+  --divider: #DDF6D2;
+}
+
+.dark {
+  --background: #0A0F08;
+  --foreground: #E8F4E3;
+  --muted-foreground: #8FAA89;
+  --card-bg: #121A0F;
+  --card-hover: #1A2514;
+  --primary: #3A9D63;
+  --primary-hover: #2C8A52;
+  --secondary: #52B775;
+  --success: #4AAA67;
+  --error: #D47171;
+  --warning: #D89F4A;
+  --border: #1F2E19;
+  --shadow: rgba(0, 0, 0, 0.6);
+  --shadow-md: rgba(0, 0, 0, 0.7);
+  --shadow-lg: rgba(0, 0, 0, 0.8);
+  --accent: #3A8551;
+  --accent-hover: #2F6D43;
+  --link: #52B775;
+  --link-hover: #6AC988;
+  --text-secondary: #A5C89F;
+  --input-bg: #0F1709;
+  --input-border: #1F2E19;
+  --input-focus: #3A9D63;
+  --divider: #1A2514;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html,
+body,
+* {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+button {
+  font-family: inherit;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-md);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+}
+

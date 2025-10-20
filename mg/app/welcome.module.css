@@ -1,0 +1,233 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--background) 0%, var(--card-hover) 100%);
+}
+
+.welcomeSection {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 0.8s ease;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.optionsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  width: 100%;
+  animation: slideUp 0.8s ease 0.2s both;
+  margin-bottom: 60px;
+}
+
+.optionCard {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 3px solid var(--border);
+  cursor: pointer;
+}
+
+.optionCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.optionCard.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  position: relative;
+  background: var(--card-bg);
+  filter: grayscale(0.3);
+}
+
+.optionCard.disabled:hover {
+  transform: none;
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: var(--border);
+}
+
+.comingSoonBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--primary);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px
+}
+
+.emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.optionCard h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.optionCard p {
+  font-size: 1rem;
+  color: var(--foreground);
+  opacity: 0.6;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.footerText {
+  color: var(--foreground);
+  font-size: 1.0rem;
+  font-weight: 500;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--card-hover);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .optionsContainer {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .optionsContainer {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .optionsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .socialLinks {
+    gap: 10px;
+  }
+
+  .socialLink {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialLink svg {
+    width: 16px;
+    height: 16px;
+  }
+}
