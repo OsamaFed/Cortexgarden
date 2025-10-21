@@ -13,13 +13,13 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cortexgarden.com",
+    url: "https://cortexgarden.vercel.app",
     title: "CortexGarden - Brain Training Games",
     description: "Train your brain with engaging trivia, math puzzles, memory games, and logic challenges.",
     siteName: "CortexGarden",
     images: [
       {
-        url: "https://i.imgur.com/acBNe0V.jpeg",
+        url: "https://i.imgur.com/cWZuLJB.jpeg",
         width: 1200,
         height: 630,
         alt: "CortexGarden - Brain Training Games",
@@ -30,7 +30,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "CortexGarden - Brain Training Games",
     description: "Train your brain with engaging trivia, math puzzles, memory games, and logic challenges.",
-    images: ["https://i.imgur.com/acBNe0V.jpeg"],
+    images: ["https://i.imgur.com/cWZuLJB.jpeg"],
   },
 };
 
