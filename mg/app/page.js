@@ -29,7 +29,7 @@ export default function Home() {
         <div className={`${styles.optionCard} ${styles.disabled}`}>
           <div className={styles.cardContent}>
             <span className={styles.emoji}>🧠</span>
-            <h2>Mind Games</h2>
+            <h2>Brain boosters</h2>
             <p>Solve Chess Puzzles, Sudoku, Logic, Memory & More!</p>
             <p>Coming Soon - Stay Tuned!</p>
           </div>
