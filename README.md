@@ -38,20 +38,20 @@ The application also supports light and dark themes, and utilizes efficient cach
 - Modular, maintainable codebase  
 
 ---
-
 ## Project Structure
+
 /app
-├── all-games/             # Displays all available game types
+├── all-games/
 │   └── page.js
-├── api/                   # API routes for game data
+├── api/
 │   ├── math-questions/
-│   │   └── route.js       # Generates math problems dynamically
+│   │   └── route.js
 │   ├── questions/
-│   │   └── route.js       # Fetches trivia questions
+│   │   └── route.js
 ├── mind-train/
-│   └── page.js            # Mind training section
-├── play/                  # Core gameplay logic and interface
-│   ├── results/           # Results screen after finishing the game
+│   └── page.js
+├── play/
+│   ├── results/
 │   ├── page.js
 │   ├── Results.module.css
 │   ├── Error.js
@@ -61,25 +61,27 @@ The application also supports light and dark themes, and utilizes efficient cach
 │   ├── NoGames.js
 │   └── Play.module.css
 ├── favicon.ico
-├── GameSelector.js        # Game selection interface
+├── GameSelector.js
 ├── globals.css
 ├── layout.js
 ├── page.js
 ├── page.module.css
-├── providers.js           # Wraps app with global providers (Redux, theme)
-├── welcome.module.css
+├── providers.js
+└── welcome.module.css
+
 /components
 ├── Spinner.js
 ├── Spinner.module.css
-└── ThemeToggle.js         # Switch between light/dark themes
-/lib
-├── gameLogic.js           # Core gameplay logic and helpers
-├── questionCache.js       # Handles local caching for questions
-/store
-├── Gameslice.js           # Redux slice managing questions and state
-├── Prov.js                # Redux provider wrapper
-└── useGameStore.js        # Creates and exports the Redux store
+└── ThemeToggle.js
 
+/lib
+├── gameLogic.js
+└── questionCache.js
+
+/store
+├── Gameslice.js
+├── Prov.js
+└── useGameStore.js
 ### Purpose
 Cortexgarden was created as a personal project to practice and showcase the concepts I recently learned in **Next.js**, **React**, and **Redux Toolkit**.  
 The goal was to integrate modern web technologies into a single, maintainable, and interactive application that focuses on cognitive and logic-based games.
