@@ -15,15 +15,15 @@ The application also supports light and dark themes, and utilizes efficient cach
 
 ## Tech Stack
 
-| Category | Technology | Description |
-|-----------|-------------|-------------|
-| Framework | **Next.js (v15.5.4)** | Application framework with app routing and server-side rendering |
-| Library | **React (v19.1.0)** | UI library for building modular and interactive components |
-| State Management | **Redux Toolkit (v2.9.0)** | Simplified and centralized state management |
-| React Integration | **react-redux (v9.2.0)** | Connects React components to the Redux store |
-| Theming | **next-themes (v0.4.6)** | Manages light and dark modes |
-| Icons | **lucide-react (v0.545.0)** | Provides scalable and modern icons |
-| Utility | **he (v1.2.0)** | Decodes HTML entities inside trivia content |
+| Category         | Name & Version           | Description                                           |
+|-----------------|-------------------------|-------------------------------------------------------|
+| **Frameworks**   | Next.js (v15.5.4)       | Application framework with app routing and SSR       |
+|                 | React (v19.1.0)         | UI library for building modular and interactive components |
+| **State Management** | Redux Toolkit (v2.9.0) | Simplified and centralized state management        |
+|                 | react-redux (v9.2.0)    | Connects React components to the Redux store        |
+| **Libraries**    | next-themes (v0.4.6)    | Manages light and dark modes                         |
+|                 | lucide-react (v0.545.0) | Provides scalable and modern icons                   |
+|                 | he (v1.2.0)             | Decodes HTML entities inside trivia content         |
 
 ---
 
