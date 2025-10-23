@@ -30,11 +30,12 @@ export function useGameLogic(games) {
     }
   }, []);
 
-  const nextQuestion = useCallback((showAnswerFirst = false) => {
+    const nextQuestion = useCallback((showAnswerFirst = false) => {
     if (showAnswerFirst) {
       setSelectedAnswer("timeout");
       setTimeout(() => {
         setSelectedAnswer(null);
+        setTimer(15);
         if (currentIndex < games.length - 1) {
           setCurrentIndex((prev) => prev + 1);
         } else {
@@ -45,9 +46,10 @@ export function useGameLogic(games) {
             router.push("/play/results");
           }, 1000);
         }
-      }, 2500);
+      }, 1700);
     } else {
       setSelectedAnswer(null);
+      setTimer(15);
       if (currentIndex < games.length - 1) {
         setCurrentIndex((prev) => prev + 1);
       } else {
@@ -61,6 +63,7 @@ export function useGameLogic(games) {
     }
   }, [currentIndex, games.length, score, correctAnswers, router, saveResults]);
 
+
   useEffect(() => {
     if (!games || games.length === 0) return;
     let interval;
@@ -73,10 +76,6 @@ export function useGameLogic(games) {
       if (interval) clearInterval(interval);
     };
   }, [timer, games, selectedAnswer, nextQuestion, gameFinished]);
-
-  useEffect(() => {
-    setTimer(15);
-  }, [currentIndex]);
 
   useEffect(() => {
     return () => {
